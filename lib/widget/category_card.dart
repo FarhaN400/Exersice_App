@@ -38,7 +38,14 @@ class CategoryCard extends StatelessWidget{
               padding: const EdgeInsets.all(20.0),
               child: Column(
                 children: [
-
+                  Spacer(),
+                  SvgPicture.asset(svgSrc!),
+                  Spacer(),
+                  Text(
+                    title!,
+                    textAlign: TextAlign.center,
+                    style: Theme.of(context).textTheme.titleSmall!.copyWith(fontSize: 15),
+                  )
                 ],
               ),
             ),

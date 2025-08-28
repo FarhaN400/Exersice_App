@@ -94,8 +94,25 @@ class HomeScreen extends StatelessWidget {
                       mainAxisSpacing: 20,
                       children: [
                         CategoryCard(
-
-                        )
+                          svgSrc: "assets/icons/Hamburger.svg",
+                          title: "Diet Recommendation",
+                          press: (){},
+                        ),
+                        CategoryCard(
+                          title: "Kegal Exercise",
+                          svgSrc: "assets/icons/Excrecises.svg",
+                          press: (){},
+                        ),
+                        CategoryCard(
+                          svgSrc: "assets/icons/Meditation.svg",
+                          title: "Meditation",
+                          press: (){},
+                        ),
+                        CategoryCard(
+                          title: "Yoga",
+                          svgSrc: "assets/icons/yoga.svg",
+                          press: (){},
+                        ),
                       ],
                     ),
                   ),
