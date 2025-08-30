@@ -8,24 +8,33 @@ class BottomNavBar extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
    return Container(
-     padding: const EdgeInsets.all(20),
+     padding: const EdgeInsets.symmetric(vertical: 10),
      height: 80,
      color: Colors.white,
      child: Row(
-       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+       mainAxisAlignment: MainAxisAlignment.spaceAround,
        children: [
-          BottomNavItem(
-            title: "Today",
-            svgScr: 'assets/icons/calendar.svg',
+          InkWell(
+            onTap: (){},
+            child: BottomNavItem(
+              title: "Today",
+              svgScr: 'assets/icons/calendar.svg',
+            ),
           ),
-         BottomNavItem(
-           title: "All Exercise",
-           svgScr: 'assets/icons/Excrecises.svg',
-           isActive: true,
+         InkWell(
+           onTap: (){},
+           child: BottomNavItem(
+             title: "All Exercise",
+             svgScr: 'assets/icons/gym.svg',
+             isActive: true,
+           ),
          ),
-         BottomNavItem(
-           title: "Setting",
-           svgScr: 'assets/icons/Settings.svg',
+         InkWell(
+           onTap: (){},
+           child: BottomNavItem(
+             title: "Setting",
+             svgScr: 'assets/icons/Settings.svg',
+           ),
          ),
        ],
      ),

@@ -1,4 +1,5 @@
 import 'package:exercise_app/constants.dart';
+import 'package:exercise_app/widget/bottom_nav_bar.dart';
 import 'package:exercise_app/widget/category_card.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -30,6 +31,7 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
     return Scaffold(
+      bottomNavigationBar: BottomNavBar(),
       body: Stack(
         children: [
           Container(
