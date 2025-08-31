@@ -1,3 +1,4 @@
+import 'package:exercise_app/Screen/details_screen.dart';
 import 'package:exercise_app/constants.dart';
 import 'package:exercise_app/widget/bottom_nav_bar.dart';
 import 'package:exercise_app/widget/category_card.dart';
@@ -21,7 +22,7 @@ class MyApp extends StatelessWidget {
           context,
         ).textTheme.apply(displayColor: kBackgroundColor),
       ),
-      home: HomeScreen(),
+      home: DetailScreen(),
     );
   }
 }
