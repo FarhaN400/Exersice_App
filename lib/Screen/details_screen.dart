@@ -64,7 +64,38 @@ class DetailScreen extends StatelessWidget{
                         ),
                       ),
                     ),
-
+                    SizedBox(height: 20,),
+                    Wrap(
+                      spacing: 20,
+                      runSpacing: 20,
+                      children: <Widget>[
+                        SeassionCard(
+                          seassionNo: 1,
+                          isDone: true,
+                          press: () {},
+                        ),
+                        SeassionCard(
+                          seassionNo: 2,
+                          press: () {},
+                        ),
+                        SeassionCard(
+                          seassionNo: 3,
+                          press: () {},
+                        ),
+                        SeassionCard(
+                          seassionNo: 4,
+                          press: () {},
+                        ),
+                        SeassionCard(
+                          seassionNo: 5,
+                          press: () {},
+                        ),
+                        SeassionCard(
+                          seassionNo: 6,
+                          press: () {},
+                        ),
+                      ],
+                    ),
                   ],
                 ),
               ),
@@ -76,7 +107,16 @@ class DetailScreen extends StatelessWidget{
   }
 }
 
-class SessionCard extends StatelessWidget{
+class SeassionCard extends StatelessWidget{
+  final int? seassionNo;
+  final bool? isDone;
+  final Function? press;
+  const SeassionCard({
+    Key? key,
+    this.seassionNo,
+    this.isDone = false,
+    this.press,
+  }) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return LayoutBuilder(builder: (context, constraint){
@@ -96,7 +136,24 @@ class SessionCard extends StatelessWidget{
                 padding: const EdgeInsets.all(8.0),
                 child: Row(
                   children: [
-
+                    Container(
+                      height: 42,
+                      width: 43,
+                      decoration: BoxDecoration(
+                        color: isDone! ? kBlueColor : Colors.white,
+                        shape: BoxShape.circle,
+                        border: Border.all(color: kBlueColor)
+                      ),
+                      child: Icon(
+                        Icons.play_arrow,
+                        color: isDone! ? Colors.white : kBlueColor,
+                      ),
+                    ),
+                    SizedBox(width: 10,),
+                    Text(
+                      "Season $seassionNo",
+                      style: Theme.of(context).textTheme.titleSmall,
+                    )
                   ],
                 ),
               ),
