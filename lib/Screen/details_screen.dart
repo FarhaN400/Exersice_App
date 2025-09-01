@@ -46,7 +46,7 @@ class DetailScreen extends StatelessWidget{
                     SizedBox(
                       width: size.width * .5,
                       child: Container(
-                        margin: const EdgeInsets.symmetric(vertical: 30),
+                        margin: const EdgeInsets.symmetric(vertical: 15),
                         padding: const EdgeInsets.symmetric(
                           horizontal: 30,
                           vertical: 5,
@@ -63,7 +63,8 @@ class DetailScreen extends StatelessWidget{
                           ),
                         ),
                       ),
-                    )
+                    ),
+
                   ],
                 ),
               ),
@@ -72,6 +73,38 @@ class DetailScreen extends StatelessWidget{
         ],
       ),
     );
+  }
+}
+
+class SessionCard extends StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    return LayoutBuilder(builder: (context, constraint){
+      return ClipRRect(
+        borderRadius: BorderRadius.circular(14),
+        child: Container(
+          width: constraint.maxWidth/2 - 10,
+          decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.circular(14),
+          ),
+          child: Material(
+            color: Colors.transparent,
+            child: InkWell(
+              onTap: (){},
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Row(
+                  children: [
+
+                  ],
+                ),
+              ),
+            ),
+          ),
+        ),
+      );
+    });
   }
 
 }
