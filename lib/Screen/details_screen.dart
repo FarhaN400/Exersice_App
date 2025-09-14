@@ -96,6 +96,52 @@ class DetailScreen extends StatelessWidget{
                         ),
                       ],
                     ),
+                    SizedBox(height: 20,),
+                    Text(
+                      'Meditation',
+                       style: Theme.of(context).textTheme.titleMedium!.copyWith(fontWeight: FontWeight.bold),
+                    ),
+                    SizedBox(height: 10,),
+                    Container(
+                      margin: const EdgeInsets.symmetric(vertical:10),
+                      padding: const EdgeInsets.all(10),
+                      height: 90,
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(16),
+                        boxShadow: [
+                          BoxShadow(
+                            offset: Offset(0, 17),
+                            blurRadius: 23,
+                            spreadRadius: -13,
+                            color: kShadowColor
+                          ),
+                        ]
+                      ),
+                      child: Row(
+                        children: [
+                          SvgPicture.asset('assets/icons/Meditation_women_small.svg'),
+                          SizedBox(width: 15,),
+                          Column(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: [
+                              Text(
+                                'Basics 2',
+                                style: Theme.of(context).textTheme.titleMedium!.copyWith(fontWeight: FontWeight.bold),
+                                textAlign: TextAlign.start,
+                              ),
+                              Text(
+                                'Start your deepen you practise'
+                              ),
+                            ],
+                          ),
+                          Padding(
+                            padding: EdgeInsets.all(10),
+                            child: SvgPicture.asset("assets/icons/Lock.svg"),
+                          ),
+                        ],
+                      ),
+                    )
                   ],
                 ),
               ),
